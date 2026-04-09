@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.javaedtion.LauncherController"
+      alignment="CENTER" spacing="10.0"
+      style="-fx-background-color: #1e1e1e;">
+
+    <Label text="TelePy Java Edition" textFill="#00FF00" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <TabPane style="-fx-background-color: #1e1e1e;">
+        <Tab text="Servers" closable="false">
+            <VBox spacing="10" style="-fx-background-color: #1e1e1e; -fx-padding: 10;">
+                <Label text="Server Name:" textFill="#00FF00"/>
+                <TextField fx:id="nameField" promptText="My Server"
+                           style="-fx-background-color: #2d2d2d; -fx-text-fill: #00ff00; -fx-prompt-text-fill: #666666;"/>
+
+                <Label text="IP Address:" textFill="#00FF00"/>
+                <TextField fx:id="ipField" text="127.0.0.1" promptText="192.168.1.1 or @"
+                           style="-fx-background-color: #2d2d2d; -fx-text-fill: #00ff00; -fx-prompt-text-fill: #666666;"/>
+
+                <Label text="Port:" textFill="#00FF00"/>
+                <TextField fx:id="portField" text="1998" promptText="1998"
+                           style="-fx-background-color: #2d2d2d; -fx-text-fill: #00ff00; -fx-prompt-text-fill: #666666;"/>
+
+                <HBox spacing="5">
+                    <Button text="Add Server" onAction="#onAddServer" 
+                            style="-fx-background-color: #006600; -fx-text-fill: white;"/>
+                    <Button text="Delete" onAction="#onDeleteServer" 
+                            style="-fx-background-color: #660000; -fx-text-fill: white;"/>
+                </HBox>
+
+                <ListView fx:id="serverList" 
+                          style="-fx-background-color: #2d2d2d; -fx-text-fill: #00ff00;"
+                          VBox.vgrow="ALWAYS"/>
+
+                <Button text="Connect" onAction="#onConnect" 
+                        style="-fx-background-color: #00aa00; -fx-text-fill: white; -fx-font-size: 14px;"/>
+            </VBox>
+        </Tab>
+        
+        <Tab text="Settings" closable="false">
+            <VBox spacing="15" style="-fx-background-color: #1e1e1e; -fx-padding: 10;">
+                <CheckBox fx:id="switchConsentCheck" text="Switch Consent" textFill="#00FF00"/>
+                
+                <Button text="Save Settings" onAction="#onSaveSettings" 
+                        style="-fx-background-color: #006600; -fx-text-fill: white;"/>
+                
+                <Button text="Reset All Settings" onAction="#onResetSettings" 
+                        style="-fx-background-color: #660000; -fx-text-fill: white;"/>
+            </VBox>
+        </Tab>
+    </TabPane>
+
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+    </padding>
+</VBox>

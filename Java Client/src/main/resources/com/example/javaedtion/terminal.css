@@ -1,0 +1,21 @@
+.text-flow {
+    -fx-background-color: #000000;
+}
+
+.scroll-pane {
+    -fx-background-color: #000000;
+    -fx-border-color: #000000;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: #000000;
+}
+
+.vbox {
+    -fx-background-color: #000000;
+}
+
+.text-field {
+    -fx-background-color: #111111;
+    -fx-text-fill: #00FF00;
+}

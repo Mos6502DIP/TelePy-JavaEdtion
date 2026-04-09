@@ -1,0 +1,18 @@
+{
+    "telepy": {
+        "port":1998,
+        "enabled":true,
+        "logs":true
+    },
+    "telnet": {
+        "port":2323,
+        "enabled":false,
+        "logs":true
+    },
+    "ssh": {
+        "port":2222,
+        "enabled":false,
+        "logs":false,
+        "password":"joshua"
+    }
+}

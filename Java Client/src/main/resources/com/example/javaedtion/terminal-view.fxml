@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.javaedtion.TerminalController"
+      fx:id="outputContainer"
+      stylesheets="@terminal.css"
+      style="-fx-background-color: #000000; -fx-padding: 0;"
+      spacing="0">
+
+    <ScrollPane fx:id="scrollPane"
+                fitToWidth="true"
+                vbarPolicy="ALWAYS"
+                hbarPolicy="NEVER"
+                style="
+                -fx-background: #000000;
+                -fx-background-color: #000000;"
+                VBox.vgrow="ALWAYS">
+        <TextFlow fx:id="terminalOutput" 
+                  style="-fx-background-color: #000000; -fx-background: #000000;  -fx-font-family: 'Lucida Console', monospace; -fx-font-size: 14px;"/>
+    </ScrollPane>
+
+    <TextField fx:id="terminalInput"
+               promptText="Enter command..."
+               style="-fx-background-color: #111111; -fx-text-fill: #00FF00; -fx-prompt-text-fill: #666666; -fx-font-family: 'Courier New', monospace; -fx-font-size: 14px; -fx-focus-color: #00FF00;"
+               onAction="#onInputSubmit"/>
+
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+    </padding>
+</VBox>
